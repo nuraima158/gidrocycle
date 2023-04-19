@@ -148,7 +148,7 @@ main .container {
     padding-right: 15px;
 }
 
-.leftM .ellipse {
+.leftM .ellipse{
     display: flex;
     justify-content: center;
     margin-top: 15%;
@@ -285,10 +285,8 @@ main .container {
 
 .looktop {
     height: 10vh;
-    display: flex;
-    flex-direction: row;
     width: 100%;
-
+    display: flex;
 }
 
 .looktop a {
@@ -322,6 +320,7 @@ main .container {
 
 .lookbottom2 {
     display: none;
+    !important
 }
 
 input[type="text"] {
@@ -379,7 +378,8 @@ input[type="submit"] {
 .type>button a img {
     height: 9px;
 }
-.type button{
+
+.type button {
     border: none;
     background: none;
     display: flex;
@@ -387,7 +387,8 @@ input[type="submit"] {
     justify-content: space-between;
     align-items: start;
 }
-.type h2{
+
+.type h2 {
     font-family: 'Barlow', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -458,9 +459,7 @@ input[type="submit"] {
 }
 
 .bags img {
-    height: 200px;
-    /* padding-top: 50px; */
-
+    height: 185px;
 }
 
 .bag {
@@ -497,7 +496,7 @@ input[type="submit"] {
     font-size: 28px;
     line-height: 36px;
     color: #2F3035;
-    padding-top: 25px;
+    padding-top: 45px;
     text-align: center;
 }
 
@@ -515,7 +514,8 @@ input[type="submit"] {
 
 #blue {
     color: #1C62CD;
-    padding-top: 10px;
+    position: relative;
+    top: -55px;
 }
 
 #look {
@@ -573,7 +573,8 @@ input[type="submit"] {
     justify-content: space-between;
 }
 
-#show {
+#show,
+#show2 {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -627,27 +628,25 @@ input[type="submit"] {
 
 }
 
-#lookevrt {
+.discounts button {
     width: 270px;
     height: 50px;
     background: #FFFFFF;
     text-align: center;
-}
-
-.discounts a {
+    border: none;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 50px;
     text-align: right;
     color: #2F3035;
-    text-decoration: none;
-
 }
 
 .buy {
     margin-top: 72px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .buy h2 {
@@ -657,11 +656,26 @@ input[type="submit"] {
     font-size: 25px;
     line-height: 30px;
     color: #2F3035;
-
 }
 
 .buy div {
     margin-top: 19px;
+    display: flex;
+}
+
+.buy>div>div {
+    margin-top: 1px;
+}
+
+.elect {
+    display: flex;
+    flex-direction: column;
+}
+
+.border2 {
+    width: 78px;
+    height: 0px;
+    border: 2px solid #1C62CD;
 }
 
 .egoods {
@@ -671,6 +685,14 @@ input[type="submit"] {
 }
 
 .radio {
+    display: none;
+}
+
+.round2 {
+    display: none;
+}
+
+#show2 {
     display: none;
 }
 
@@ -696,6 +718,13 @@ footer {
 
 footer .container {
     display: flex;
+}
+
+.info_new,
+.shop_new,
+.border-line,
+.under_footer {
+    display: none;
 }
 
 .signup {
@@ -809,10 +838,14 @@ footer .container {
 
     }
 
-    .container {
+    .top .container {
         margin-top: 10px;
+        width: 100%;
+        margin: 0;
         display: flex;
         justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .left,
@@ -851,6 +884,10 @@ footer .container {
         background: #F0F0F4;
         height: 100%;
         display: flex;
+        width: 100%;
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .header a {
@@ -877,8 +914,9 @@ footer .container {
     main {
         height: fit-content;
     }
-
     main .container {
+        width: 100%;
+        margin: 0;
         margin-top: 25px;
         display: flex;
         flex-direction: column;
@@ -889,12 +927,19 @@ footer .container {
     }
 
     .leftM2 {
-        display: block;
         width: 100%;
+        display: block;
         margin-right: 0;
         margin-left: 0;
+        margin-bottom: 40px;
     }
-
+    .leftM2 .ellipse{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: -40px;
+        margin-left: 20px;
+    }
     .rightM {
         width: 90%;
         border: 1px solid #CDCDCD;
@@ -929,8 +974,7 @@ footer .container {
         height: 6vh;
         display: flex;
         width: 100%;
-        margin-top: 80px;
-
+        margin-top: 40px;
     }
 
     .looktop a {
@@ -939,20 +983,19 @@ footer .container {
         font-size: 20px;
         line-height: 24px;
         color: #2F3035;
-        text-decoration: none;
-        padding-right: 30px;
+    }
+
+    .looktop>div:first-child {
+        border-bottom: 2px solid #1C62CD;
+        height: 26px;
     }
 
     .looktop #bold {
-        font-weight: 700;
-        background: #F0F0F4;
-        border-radius: 5px;
-        width: 180px;
-        height: 40px;
+        font-weight: 400;
+        background: none;
+        border: none;
         text-align: center;
-        margin-top: -5px;
-        padding-top: 5px;
-        padding-left: 6px;
+
     }
 
     .lookbottom {
@@ -971,7 +1014,7 @@ footer .container {
         background: #F0F0F4;
         border-radius: 3px;
         border: none;
-        width: 300px;
+        width: 340px;
         height: 50px;
         font-style: normal;
         font-weight: 400;
@@ -990,18 +1033,18 @@ footer .container {
         height: fit-content;
         display: flex;
         flex-wrap: wrap;
-        margin-top: 80px;
+        margin-top: 40px;
     }
 
     .type {
         background: #FFFFFF;
         border: 1px solid #CDCDCD;
         border-radius: 3px;
-        width: 320px;
+        width: 370px;
         height: 129px;
         display: flex;
-        margin-bottom: 30px;
-        margin-left: 20px;
+        margin-bottom: 15px;
+        margin-left: 15px;
     }
 
     .type img {
@@ -1043,11 +1086,16 @@ footer .container {
     .popular .container {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .goods {
         height: 20%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
     }
 
     .goods>div .not,
@@ -1087,6 +1135,7 @@ footer .container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 40px;
     }
 
     .bags img {
@@ -1100,8 +1149,8 @@ footer .container {
     .bag2 {
         border: 1px solid #CDCDCD;
         border-radius: 3px;
-        width: 250px;
-        height: 360px;
+        width: 300px;
+        height: 403px;
         margin-right: 30px;
         display: flex;
         flex-direction: column;
@@ -1138,12 +1187,14 @@ footer .container {
         padding-right: 15px;
     }
 
-    .round img {
+    .round img,
+    .round2 img {
         height: 14px;
         padding-right: 20px;
     }
 
-    .round {
+    .round,
+    .round2 {
         display: flex;
         margin-top: 20px;
     }
@@ -1180,7 +1231,7 @@ footer .container {
     }
 
     .discounts2 {
-        height: 20vh;
+        height: 95px;
         background: #1C62CD;
         width: 100%;
         display: flex;
@@ -1191,10 +1242,7 @@ footer .container {
 
     .discounts2 .row {
         display: flex;
-    }
-
-    .discounts2 div img {
-        height: 50px;
+        justify-content: center;
     }
 
     .discounts2 div h1 {
@@ -1203,29 +1251,32 @@ footer .container {
         font-size: 18px;
         line-height: 18px;
         color: #FFFFFF;
-
+        text-align: center;
+        padding-top: 5px;
     }
 
-    #lookevrt2 {
+    .discounts2 .row button {
         width: 132.19px;
-        height: 33px;
+        height: 30px;
         background: #FFFFFF;
         text-align: center;
-    }
-
-    .discounts2>div a {
+        border: none;
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
         line-height: 50px;
-        text-align: right;
         color: #2F3035;
-        text-decoration: none;
+        margin-top: 7px;
+        display: flex;
+        align-items: center;
     }
 
     .buy {
         margin-top: 72px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .buy h2 {
@@ -1235,11 +1286,35 @@ footer .container {
         font-size: 25px;
         line-height: 30px;
         color: #2F3035;
-
+        text-align: center;
+        width: 80%;
     }
 
-    .buy div {
+    .buy>div {
         margin-top: 19px;
+        display: flex;
+        align-items: center;
+    }
+
+    .buy>div>div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 7px;
+    }
+
+    .buy>div>a:first-child {
+        font-weight: 700;
+    }
+
+    .buy .border {
+        width: 65px;
+        height: 0px;
+        border: 2px solid #1C62CD;
+        margin-top: 3px;
+    }
+
+    .buy>div .elect {
+        display: none;
     }
 
     .egoods {
@@ -1258,12 +1333,154 @@ footer .container {
         justify-content: space-evenly;
         border: 1px solid #CDCDCD;
         border-radius: 3px;
-        width: 250px;
-        height: 360px;
-        margin-right: 30px;
+        width: 300px;
+        height: 403px;
+        margin-left: 27px;
+
     }
 
     .bag b {
         padding-top: 20px;
+    }
+
+    .round2 {
+        display: flex;
+        margin-left: 15px;
+    }
+
+    #show2 {
+        display: block;
+        margin-left: 15px;
+    }
+
+    footer {
+        height: 32vh;
+        width: 100%;
+        margin-top: -80px;
+        background: #F0F0F4;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 ;
+    }
+
+    .signup {
+        width: 80%;
+        margin-top: 17px;
+    }
+
+    .signup div {
+        display: flex;
+        margin-top: 34px;
+    }
+
+    .signup h3 {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .signup input[type="text"] {
+        width: 210px;
+        height: 30px;
+    }
+
+    .signup input[type="submit"] {
+        width: 120px;
+        height: 30px;
+    }
+
+    .information,
+    .network {
+        display: none;
+    }
+
+    .info_new,
+    .shop_new,
+    .border-line {
+        display: block;
+        width: 100%;
+    }
+
+    .info_new,
+    .shop_new {
+        margin-left: 20px;
+    }
+
+    .info_new a,
+    .shop_new a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -0.0861538px;
+        color: #504f4f;
+        text-decoration: none;
+        text-align: left;
+    }
+
+    .info_new select,
+    .shop_new select {
+        border: none;
+        background: none;
+    }
+
+    .info_new select {
+        padding-right: 245px;
+    }
+
+    .shop_new select {
+        padding-right: 210px;
+    }
+
+    .border-line {
+        width: 99%;
+        height: 0px;
+        border: 2px solid rgb(228, 223, 223);
+    }
+
+    footer div>div:nth-child(3) {
+        margin-top: 40px;
+    }
+
+    footer>div>div {
+        margin-top: 16px;
+    }
+
+    .under_footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 30vh;
+    }
+
+    .network_new {
+        margin-top: 40px;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .network_new img {
+        height: 30px;
+    }
+
+    .under_footer>div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        margin-left: -70px;
+    }
+
+    .under_footer>div a {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        color: #48494D;
+        text-decoration: none;
+        padding-top: 12px;
     }
 }
